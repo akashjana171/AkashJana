@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title id="pageTitle">Akash Jana | IT Executive & System Engineer</title>
+    <meta id="pageDescription" name="description"
+          content="Professional portfolio of Akash Jana, IT Executive and System Engineer.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* Small additions only for the upgraded structure. */
+        .section-title { text-align:center; }
+        .hero-content .lead { max-width:720px; }
+        .about-grid { display:grid; grid-template-columns:1.25fr .75fr; gap:24px; }
+        .focus-card {
+            background:linear-gradient(145deg,#1b293e,#111c2e);
+            border:1px solid var(--line); border-radius:16px; padding:26px;
+        }
+        .contact-grid { display:grid; grid-template-columns:.8fr 1.2fr; gap:24px; }
+        .contact-card { height:100%; }
+        .contact-social { display:flex; gap:10px; margin-top:18px; }
+        .contact-social a {
+            width:42px;height:42px;display:grid;place-items:center;
+            border:1px solid rgba(56,189,248,.25);border-radius:9px;
+            color:#dbeafe;background:rgba(255,255,255,.035);
+        }
+        .contact-social a:hover { color:var(--cyan); border-color:var(--cyan); }
+        .hero-actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:24px; }
+        .hero-actions .btn { margin:0!important; }
+        .resume-view { background:transparent; color:#dbeafe; border:1px solid rgba(255,255,255,.25); }
+        .resume-view:hover { color:#fff; border-color:var(--cyan); }
+        .project-card .project-image { height:205px;width:100%;object-fit:cover; }
+        .project-card .card-body { padding:23px; }
+        .project-card h4 { color:var(--cyan);font-size:19px; }
+        .project-card p { color:#cbd5e1;font-size:13px;line-height:1.7; }
+        .project-link { font-size:12px;color:var(--cyan);font-weight:600; }
+        @media(max-width:900px){
+            .about-grid,.contact-grid{grid-template-columns:1fr;}
+        }
+    </style>
+
+<style id="portfolio-ui-fix">
+/* Compact hero icons and buttons */
+.hero .social-links a,
+.hero .social-icons a,
+.social-links a {
+    width: 42px !important;
+    height: 42px !important;
+    font-size: 16px !important;
+}
+
+.hero .btn,
+.hero a.btn {
+    min-height: 48px !important;
+    padding: 11px 20px !important;
+    font-size: 18px !important;
+    border-radius: 8px !important;
+}
+
+.hero .btn i,
+.hero a.btn i {
+    font-size: 16px !important;
+}
+
+/* Keep View Projects beside the resume button */
+.hero .hero-actions,
+.hero .action-buttons,
+.hero .buttons {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 12px !important;
+    align-items: center !important;
+}
+
+/* Smaller floating technology badges/icons */
+.hero .tech-badge,
+.hero .floating-badge {
+    font-size: 12px !important;
+    padding: 7px 10px !important;
+}
+
+.hero .tech-badge i,
+.hero .floating-badge i {
+    font-size: 12px !important;
+}
+
+/* Make the profile social icons compact */
+.social-links i,
+.social-icons i {
+    font-size: 15px !important;
+}
+#projects { scroll-margin-top: 90px; }
+</style>
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold text-info" href="#home" id="navName">Akash Jana</a>
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section id="home" class="hero">
+    <div class="hero-overlay"></div>
+
+    <div class="container">
+        <div class="row align-items-center min-vh-100 hero-content">
+
+            <div class="col-lg-7">
+                <span class="hero-kicker">
+                    <span class="online-dot"></span>
+                    AVAILABLE FOR IT OPPORTUNITIES
+                </span>
+
+                <h1>
+                    <span id="heroName">Akash Jana</span>
+                </h1>
+
+                <h2>
+                    <span id="heroTitle">IT Executive</span>
+                    <span class="typing-cursor">|</span>
+                </h2>
+
+                <p id="heroDescription">
+                    IT professional with <span id="heroExperience">4+ years</span> of experience in Windows Server,
+                    Active Directory, VMware ESXi, Microsoft 365, Networking,
+                    Linux Administration, and Enterprise IT Infrastructure.
+                </p>
+
+                <div class="tech-pills">
+                    <span>Windows Server</span>
+                    <span>Active Directory</span>
+                    <span>VMware ESXi</span>
+                    <span>Linux</span>
+                    <span>Networking</span>
+                    <span>AWS</span>
+                </div>
+
+                <div class="hero-actions">
+
+   <a id="resumeDownload"
+   href="./assets/Akash_Jana_Resume.pdf"
+   class="btn btn-info btn-lg"
+   download="Akash_Jana_Resume.pdf">
+    <i class="fas fa-file-arrow-down"></i>
+    Download Resume
+</a>
+
+    <a href="#projects" class="btn btn-outline-light btn-lg">
+        <i class="fas fa-diagram-project"></i>
+        View Projects
+    </a>
+
+</div>
+
+                <div class="hero-social">
+                    <a id="heroLinkedIn" href="https://www.linkedin.com/in/akash-jana-a234b3217/"
+                       target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a id="heroGitHub" href="https://github.com/akashjana171"
+                       target="_blank" rel="noopener" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a id="heroEmail" href="mailto:akashjana171@gmail.com"
+                       aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="profile-wrap">
+                    <div class="profile-glow"></div>
+                    <div class="profile-ring ring-one"></div>
+                    <div class="profile-ring ring-two"></div>
+
+                    <img id="heroProfile"
+                         class="hero-profile"
+                         src="images/profile.jpg"
+                         alt="Akash Jana">
+
+                    <div class="floating-tech tech-vmware">
+                        <i class="fas fa-server"></i> VMware
+                    </div>
+                    <div class="floating-tech tech-linux">
+                        <i class="fab fa-linux"></i> Linux
+                    </div>
+                    <div class="floating-tech tech-network">
+                        <i class="fas fa-network-wired"></i> Network
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="stats-section">
+    <div class="container">
+        <div class="stats-card row g-0">
+            <div class="col-md-3 stat-item">
+                <strong id="statExperience">4+ years</strong>
+                <span>Professional Experience</span>
+            </div>
+            <div class="col-md-3 stat-item">
+                <strong id="statSkills">6+</strong>
+                <span>Core Skills</span>
+            </div>
+            <div class="col-md-3 stat-item">
+                <strong id="statProjects">5+</strong>
+                <span>Technical Projects</span>
+            </div>
+            <div class="col-md-3 stat-item">
+                <strong>24/7</strong>
+                <span>IT Mindset</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="section-alt">
+    <div class="container">
+        <div class="section-title">
+            <span>01 / PROFILE</span>
+            <h2>About <b>Me</b></h2>
+            <p>System administration, infrastructure and practical IT support.</p>
+        </div>
+
+        <div class="about-grid">
+            <div class="about-card">
+                <h3 id="aboutHeading">IT Executive & System Engineer</h3>
+                <p id="aboutDescription">
+                    IT professional with experience in Windows Server Administration,
+                    Active Directory, VMware ESXi, Microsoft 365, Networking,
+                    Desktop Support, Hardware Troubleshooting, and Enterprise IT Infrastructure.
+                </p>
+                <p>
+                    I enjoy solving technical problems, improving IT infrastructure,
+                    learning new technologies, and delivering reliable IT support.
+                </p>
+
+                <div class="about-info-grid">
+                    <div>
+                        <small>Name</small>
+                        <strong id="aboutName">Akash Jana</strong>
+                    </div>
+                    <div>
+                        <small>Current Role</small>
+                        <strong id="aboutRole">IT Executive</strong>
+                    </div>
+                    <div>
+                        <small>Experience</small>
+                        <strong>4+ Years</strong>
+                    </div>
+                    <div>
+                        <small>Company</small>
+                        <strong id="aboutCompany">Gypmart India Private Limited</strong>
+                    </div>
+                    <div>
+                        <small>Location</small>
+                        <strong id="aboutLocation">Howrah, West Bengal, India</strong>
+                    </div>
+                    <div>
+                        <small>Email</small>
+                        <strong id="aboutEmail">akashjana171@gmail.com</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="focus-card">
+                <div class="mini-title"><i class="fas fa-bullseye"></i> IT FOCUS AREAS</div>
+
+                <div class="focus-row">
+                    <i class="fas fa-server"></i>
+                    <div><strong>Windows Infrastructure</strong><small>AD, DNS, DHCP, GPO, File Services</small></div>
+                </div>
+                <div class="focus-row">
+                    <i class="fas fa-cloud"></i>
+                    <div><strong>Virtualization</strong><small>VMware ESXi, VM, Datastore and Snapshots</small></div>
+                </div>
+                <div class="focus-row">
+                    <i class="fas fa-network-wired"></i>
+                    <div><strong>Networking</strong><small>TCP/IP, VLAN, VPN, Routing and Switching</small></div>
+                </div>
+                <div class="focus-row">
+                    <i class="fab fa-linux"></i>
+                    <div><strong>Linux & Cloud</strong><small>Ubuntu, SSH, Docker, AWS and services</small></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="skills" class="section-dark">
+    <div class="container">
+        <div class="section-title">
+            <span>02 / TECHNOLOGY</span>
+            <h2>Technical <b>Skills</b></h2>
+            <p>Platforms and tools used in IT infrastructure environments.</p>
+        </div>
+
+        <div id="skillsContainer" class="row g-4">
+<div class="col-lg-4 col-md-6">
+    <div class="skill-card">
+        <div class="card-body">
+            <div class="skill-number">SKILL 01</div>
+            <div class="skill-icon"><i class="fas fa-server"></i></div>
+            <h4>Windows Server</h4>
+            <p>Active Directory, DNS, DHCP, Group Policy and File Services</p>
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-4 col-md-6">
+    <div class="skill-card">
+        <div class="card-body">
+            <div class="skill-number">SKILL 02</div>
+            <div class="skill-icon"><i class="fas fa-users-gear"></i></div>
+            <h4>Active Directory</h4>
+            <p>Users, groups, permissions, GPO and domain administration</p>
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-4 col-md-6">
+    <div class="skill-card">
+        <div class="card-body">
+            <div class="skill-number">SKILL 03</div>
+            <div class="skill-icon"><i class="fas fa-cloud"></i></div>
+            <h4>VMware ESXi</h4>
+            <p>Virtual machines, datastores, snapshots and virtualization</p>
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-4 col-md-6">
+    <div class="skill-card">
+        <div class="card-body">
+            <div class="skill-number">SKILL 04</div>
+            <div class="skill-icon"><i class="fas fa-network-wired"></i></div>
+            <h4>Networking</h4>
+            <p>TCP/IP, VLAN, VPN, routing, switching and troubleshooting</p>
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-4 col-md-6">
+    <div class="skill-card">
+        <div class="card-body">
+            <div class="skill-number">SKILL 05</div>
+            <div class="skill-icon"><i class="fab fa-linux"></i></div>
+            <h4>Linux Administration</h4>
+            <p>Ubuntu Server, SSH, Apache, Docker and services</p>
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-4 col-md-6">
+    <div class="skill-card">
+        <div class="card-body">
+            <div class="skill-number">SKILL 06</div>
+            <div class="skill-icon"><i class="fab fa-aws"></i></div>
+            <h4>AWS Cloud</h4>
+            <p>EC2, IAM, VPC and Security Groups</p>
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+</section>
+
+<section class="section-alt infrastructure-section">
+    <div class="container">
+        <div class="section-title">
+            <span>03 / INFRASTRUCTURE</span>
+            <h2>IT Infrastructure <b>Mindset</b></h2>
+            <p>Design • Configure • Monitor • Troubleshoot • Document</p>
+        </div>
+
+        <div class="infra-card">
+            <div class="infra-flow">
+                <div class="infra-node"><i class="fas fa-globe"></i><span>Internet</span></div>
+                <div class="infra-line"></div>
+                <div class="infra-node"><i class="fas fa-shield-halved"></i><span>Firewall</span></div>
+                <div class="infra-line"></div>
+                <div class="infra-node"><i class="fas fa-network-wired"></i><span>Switch</span></div>
+            </div>
+
+            <div class="infra-branches">
+                <div><i class="fas fa-server"></i><span>Servers</span></div>
+                <div><i class="fas fa-users"></i><span>Users</span></div>
+                <div><i class="fas fa-wifi"></i><span>Wi-Fi</span></div>
+                <div><i class="fas fa-cloud"></i><span>Cloud</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="experience" class="section-dark">
+    <div class="container">
+        <div class="section-title">
+            <span>04 / CAREER</span>
+            <h2>Professional <b>Experience</b></h2>
+            <p>My professional journey in Information Technology.</p>
+        </div>
+
+        <div id="experienceContainer" class="experience-timeline">
+<div class="exp-item">
+    <div class="exp-dot">01</div>
+    <div class="exp-card">
+        <span class='current-badge'>CURRENT</span>
+        <h3>IT Executive</h3>
+        <h5>Gypmart India Private Limited</h5>
+        <div class="exp-duration"><i class="far fa-calendar"></i> July 2026 - Present</div>
+        <ul>
+            <li>Desktop Support</li><li>Network Troubleshooting</li><li>Microsoft 365 Support</li><li>Hardware and Software Troubleshooting</li><li>IT Asset Management</li>
+        </ul>
+    </div>
+</div>
+
+<div class="exp-item">
+    <div class="exp-dot">02</div>
+    <div class="exp-card">
+        
+        <h3>System Engineer</h3>
+        <h5>Precision Informatics (M) Pvt. Ltd.</h5>
+        <div class="exp-duration"><i class="far fa-calendar"></i> July 2025 - May 2026</div>
+        <ul>
+            <li>Windows Server Administration</li><li>Active Directory Management</li><li>VMware ESXi Administration</li><li>Microsoft 365 Support</li><li>DNS and DHCP</li><li>Enterprise IT Infrastructure Support</li>
+        </ul>
+    </div>
+</div>
+
+<div class="exp-item">
+    <div class="exp-dot">03</div>
+    <div class="exp-card">
+        
+        <h3>Facility Management Engineer</h3>
+        <h5>Eastern Services</h5>
+        <div class="exp-duration"><i class="far fa-calendar"></i> June 2023 - July 2025</div>
+        <ul>
+            <li>Oracle MICROS POS Support</li><li>LAN and Network Troubleshooting</li><li>Aruba Wireless Support</li><li>Hardware Maintenance</li><li>Desktop and Printer Support</li>
+        </ul>
+    </div>
+</div>
+
+<div class="exp-item">
+    <div class="exp-dot">04</div>
+    <div class="exp-card">
+        
+        <h3>IT Executive</h3>
+        <h5>Fusion BPO Services</h5>
+        <div class="exp-duration"><i class="far fa-calendar"></i> April 2022 - June 2023</div>
+        <ul>
+            <li>Desktop Support</li><li>Operating System Installation</li><li>Printer Configuration</li><li>Remote User Support</li><li>IT Inventory Management</li>
+        </ul>
+    </div>
+</div>
+        </div>
+    </div>
+</section>
+
+<section id="projects" class="section-alt">
+    <div class="container">
+        <div class="section-title">
+            <span>05 / WORK</span>
+            <h2>Featured <b>Projects</b></h2>
+            <p>Technical projects and hands-on infrastructure labs.</p>
+        </div>
+
+        <div id="projectsContainer" class="row g-4">
+<div class="col-lg-4 col-md-6">
+    <div class="project-card">
+        <img src="images/vmware-esxi.jpg" class="project-image" alt="VMware ESXi Lab" loading="lazy">
+        <div class="card-body">
+            <div class="skill-number">PROJECT 01</div>
+            <h4>VMware ESXi Lab</h4>
+            <p>Virtualization lab using VMware ESXi with virtual machines, datastores and snapshots.</p>
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-4 col-md-6">
+    <div class="project-card">
+        <img src="images/active-directory.jpg" class="project-image" alt="Active Directory" loading="lazy">
+        <div class="card-body">
+            <div class="skill-number">PROJECT 02</div>
+            <h4>Active Directory</h4>
+            <p>Configured Active Directory, DNS, DHCP and Group Policy in a Windows Server lab.</p>
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-4 col-md-6">
+    <div class="project-card">
+        <img src="images/network-infrastructure.jpg" class="project-image" alt="Network Infrastructure" loading="lazy">
+        <div class="card-body">
+            <div class="skill-number">PROJECT 03</div>
+            <h4>Network Infrastructure</h4>
+            <p>LAN, VLAN, IP addressing, routing, switching and enterprise network troubleshooting.</p>
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-4 col-md-6">
+    <div class="project-card">
+        <img src="images/linux-administration.jpg" class="project-image" alt="Linux Administration" loading="lazy">
+        <div class="card-body">
+            <div class="skill-number">PROJECT 04</div>
+            <h4>Linux Administration</h4>
+            <p>Ubuntu Server administration with SSH, Apache, Docker and service management.</p>
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-4 col-md-6">
+    <div class="project-card">
+        <img src="images/aws-cloud.jpg" class="project-image" alt="AWS Cloud Lab" loading="lazy">
+        <div class="card-body">
+            <div class="skill-number">PROJECT 05</div>
+            <h4>AWS Cloud Lab</h4>
+            <p>AWS lab environment using EC2, IAM, VPC and Security Groups.</p>
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-4 col-md-6">
+    <div class="project-card">
+        <img src="images/background.jpg" class="project-image" alt="Enterprise IT Infrastructure" loading="lazy">
+        <div class="card-body">
+            <div class="skill-number">PROJECT 06</div>
+            <h4>Enterprise IT Infrastructure</h4>
+            <p>Hands-on IT infrastructure support covering endpoints, servers, networking and troubleshooting.</p>
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="section-dark">
+    <div class="container">
+        <div class="section-title">
+            <span>06 / CONNECT</span>
+            <h2>Contact <b>Me</b></h2>
+            <p>Let's connect for IT opportunities and technical discussions.</p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-card">
+                <h4>Contact Information</h4>
+
+                <div class="contact-row">
+                    <i class="fas fa-user"></i>
+                    <div><small>Name</small><strong id="contactName">Akash Jana</strong></div>
+                </div>
+                <div class="contact-row">
+                    <i class="fas fa-envelope"></i>
+                    <div><small>Email</small><a id="contactEmail" href="mailto:akashjana171@gmail.com">akashjana171@gmail.com</a></div>
+                </div>
+                <div class="contact-row">
+                    <i class="fas fa-phone"></i>
+                    <div><small>Phone</small><strong id="contactPhone">+91-8609771837</strong></div>
+                </div>
+                <div class="contact-row">
+                    <i class="fas fa-location-dot"></i>
+                    <div><small>Location</small><strong id="contactLocation">Howrah, West Bengal, India</strong></div>
+                </div>
+
+                <div class="contact-social">
+                    <a id="contactLinkedIn" href="https://www.linkedin.com/in/akash-jana-a234b3217/"
+                       target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a id="contactGitHub" href="https://github.com/akashjana171"
+                       target="_blank" rel="noopener" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <h4>Send Me a Message</h4>
+
+                <form id="contactForm" novalidate>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <input type="text" name="name" class="form-control"
+                                   placeholder="Your Name" autocomplete="name" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <input type="email" name="email" class="form-control"
+                                   placeholder="Your Email" autocomplete="email" required>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <input type="text" name="subject" class="form-control"
+                               placeholder="Subject" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <textarea name="message" class="form-control" rows="6"
+                                  placeholder="Write your message here..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-info">
+                        <i class="fas fa-paper-plane"></i>
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+            <div>
+                <h5 class="text-info mb-0" id="footerName">Akash Jana</h5>
+                <p id="footerTitle">IT Executive | System Engineer</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+
+        <hr>
+        <small>© 2026 Akash Jana. All Rights Reserved.</small>
+    </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+
+
+
+</body>
+</html>
